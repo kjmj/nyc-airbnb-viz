@@ -12,7 +12,9 @@
   export default {
     name: "SampleViz",
     props: {
-      datasetPromise: Promise
+      datasetPromise: Promise,
+      height: Number,
+      width: Number
     },
     mounted() {
       let vm = this
@@ -22,15 +24,15 @@
         // data available here
         console.log(data)
 
-        var width = 940
-        var height = 600
+        var height = vm.height
+        var width = vm.width
 
         // draw a quick svg for show
         var svg = d3
           .select('#sampleViz')
           .append('svg')
-          .attr('width', width)
           .attr('height', height)
+          .attr('width', width)
 
         svg.append("rect")
           .attr("width", "100%")

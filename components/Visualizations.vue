@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sample-viz :datasetPromise="datasetPromise"></sample-viz>
+    <sample-viz :datasetPromise="datasetPromise" :height="height" :width="width"></sample-viz>
   </div>
 </template>
 
@@ -13,7 +13,9 @@
     components: {SampleViz},
     data() {
       return {
-        datasetPromise: 'hello'
+        datasetPromise: null,
+        height: 900,
+        width: 600
       }
     },
     created() {
