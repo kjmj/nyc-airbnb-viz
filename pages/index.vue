@@ -4,7 +4,9 @@
       <description></description>
     </section>
     <section class="section" id="sampleViz">
-      <visualizations></visualizations>
+      <client-only>
+        <visualizations></visualizations>
+      </client-only>
     </section>
 
     <!--this is here temporarily so clicking navbar items scrolls-->
