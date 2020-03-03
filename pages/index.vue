@@ -4,22 +4,24 @@
       <description></description>
     </section>
     <section class="section" id="sampleViz">
-      <sample-viz></sample-viz>
+      <visualizations></visualizations>
     </section>
+
+    <!--this is here temporarily so clicking navbar items scrolls-->
     <div style="height: 1000px"></div>
   </div>
 </template>
 
 <script>
 import Description from '~/components/Description'
-import SampleViz from '~/components/SampleViz'
+import Visualizations from "../components/Visualizations";
 
 export default {
   name: 'HomePage',
 
   components: {
+    Visualizations,
     Description,
-    SampleViz
   }
 }
 </script>

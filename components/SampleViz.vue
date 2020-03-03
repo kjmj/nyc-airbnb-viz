@@ -7,7 +7,18 @@
 
 <script>
   export default {
-    name: "SampleViz"
+    name: "SampleViz",
+    props: {
+      datasetPromise: Promise
+    },
+    mounted() {
+      let vm = this
+
+      vm.datasetPromise.then(function(data) {
+        console.log(data)
+      })
+
+    }
   }
 </script>
 

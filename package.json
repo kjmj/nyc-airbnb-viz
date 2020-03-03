@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "d3": "^5.15.0",
     "node-sass": "^4.13.1",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
