@@ -3,8 +3,9 @@
 <!--    <sample-viz :datasetPromise="datasetPromise" :height="height" :width="width"></sample-viz>-->
     <section class="section">
       <small-multiples :smallMultiplesPromise="smallMultiplesPromise" :height="height" :width="width"></small-multiples>
+    </section>
+    <section class="section">
       <Map :neighborhoods-promise="neighborhoodsPromise" :price-by-neighbourhood-promise="priceByNeighbourhoodPromise"></Map>
-
     </section>
   </div>
 </template>
