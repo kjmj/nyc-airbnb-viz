@@ -13,9 +13,7 @@
 
       <div class="card-content columns">
         <div class="column is-narrow">
-          <figure class="image is-256x256">
-            <img :src="image">
-          </figure>
+            <img :src="image" style="width: 256px; display: block">
         </div>
 
         <div class="column">
