@@ -1,7 +1,13 @@
 <template>
   <div>
-<!--    <sample-viz :datasetPromise="datasetPromise" :height="height" :width="width"></sample-viz>-->
-    <Map :neighborhoods-promise="neighborhoodsPromise" :price-by-neighbourhood-promise="priceByNeighbourhoodPromise"></Map>
+    <!--    <sample-viz :datasetPromise="datasetPromise" :height="height" :width="width"></sample-viz>-->
+    <section class="section" id="carousel">
+      <carousel></carousel>
+    </section>
+    <section class="section" id='map'>
+      <Map :neighborhoods-promise="neighborhoodsPromise"
+           :price-by-neighbourhood-promise="priceByNeighbourhoodPromise"></Map>
+    </section>
   </div>
 </template>
 
@@ -9,10 +15,11 @@
   import SampleViz from "./SampleViz";
   import Map from "./Map";
   import * as d3 from 'd3'
+  import Carousel from "./Carousel";
 
   export default {
     name: "Visualizations",
-    components: {Map, SampleViz},
+    components: {Carousel, Map, SampleViz},
     data() {
       return {
         datasetPromise: null,
