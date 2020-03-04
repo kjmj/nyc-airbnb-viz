@@ -36,7 +36,7 @@
             .entries(data);
 
           // What is the list of groups?
-          allKeys = sumstat.map(function(d){return d.key})
+          var allKeys = sumstat.map(function(d){return d.key})
 
           // Add an svg element for each group. The will be one beside each other and will go on the next row when no more room available
           var svg = d3.select("#my_dataviz")
