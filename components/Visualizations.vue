@@ -21,6 +21,11 @@
         height: 900,
         width: 600
       }
+      return {
+        smallMultiplesPromise: null,
+        height: 900,
+        width: 600
+      }
     },
     created() {
       // load in our dataset
