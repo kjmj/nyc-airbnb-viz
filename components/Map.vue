@@ -91,6 +91,8 @@
                 .style('stroke', 'black')
             })
             .on('mousemove', function(d) {
+              var total = d.total =='No data' ? 'No data' : d.total.toFixed(2)
+
               tooltip
                 .html(
                   'Borough: ' +
@@ -100,7 +102,7 @@
                   d.properties.neighborhood +
                   '<br>' +
                   'Average price: $' +
-                  d.total.toFixed(2)
+                  total
                 )
                 .style('top', event.pageY - 10 + 'px')
                 .style('left', event.pageX + 10 + 'px')
