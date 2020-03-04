@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sample-viz :datasetPromise="datasetPromise" :height="height" :width="width"></sample-viz>
+<!--    <sample-viz :datasetPromise="datasetPromise" :height="height" :width="width"></sample-viz>-->
     <section class="section">
       <small-multiples :smallMultiplesPromise="smallMultiplesPromise" :height="height" :width="width"></small-multiples>
       <Map :neighborhoods-promise="neighborhoodsPromise" :price-by-neighbourhood-promise="priceByNeighbourhoodPromise"></Map>
@@ -17,18 +17,13 @@
 
   export default {
     name: "Visualizations",
-    components: {SampleViz, SmallMultiples},
-    components: {Map, SampleViz},
+    components: {SampleViz, SmallMultiples, Map},
     data() {
       return {
         datasetPromise: null,
+        smallMultiplesPromise: null,
         neighborhoodsPromise: null,
         priceByNeighbourhoodPromise: null,
-        height: 900,
-        width: 600
-      }
-      return {
-        smallMultiplesPromise: null,
         height: 900,
         width: 600
       }
