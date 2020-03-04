@@ -21,8 +21,8 @@
       vm.smallMultiplesPromise.then(function(data) {
 
         var margin = {top: 30, right: 0, bottom: 30, left: 50},
-          width = 610 - margin.left - margin.right,
-          height = 210 - margin.top - margin.bottom;
+          width = 900 - margin.left - margin.right,
+          height = 300 - margin.top - margin.bottom;
         var temp = 0
 
         // group the data: I want to draw one line per group
@@ -46,16 +46,19 @@
 
         // Add X axis
         var x = d3.scaleLinear()
-          .domain([0, d3.max(data, function(d) { return d.Distance; })])
+          .domain([0, 1])
           .range([ 0, width ]);
-        svg.append("g")
-          .attr("transform", "translate(" + temp + "," + height + ")")
-          .call(d3.axisBottom(x).ticks(5));
 
         //Add Y axis
         var y = d3.scaleLinear()
-          .domain([0, d3.max(data, function(d) { return +d.Price; })])
+          .domain([0, 1000])
           .range([ height, 0 ]);
+
+
+        svg.append("g")
+          .attr("transform", "translate(" + temp + "," + height + ")")
+          .call(d3.axisBottom(x).ticks(8));
+
         svg.append("g")
           .call(d3.axisLeft(y).ticks(5));
 
@@ -66,14 +69,14 @@
 
         // Draw the line
         svg
-          .append("line")
+          .append("path")
           .attr("fill", "none")
-          .attr("stroke", function(d) { return color(d.key) })
+          .attr("stroke", function(d){ return color(d.key) })
           .attr("stroke-width", 1.9)
           .attr("d", function(d){
             return d3.line()
               .x(function(d) { return x(d.Distance); })
-              .y(function(d) { return y(+d.Price); })
+              .y(function(d) { return y(d.Price); })
               (d.values)
           })
 
