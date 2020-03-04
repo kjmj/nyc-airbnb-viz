@@ -7,14 +7,12 @@
 </template>
 
 <script>
-  import * as d3 from 'd3'
+ // import * as d3 from 'd3'
 
   export default {
     name: "SmallMultiples",
     props: {
       smallMultiplesPromise: Promise,
-      height: Number,
-      width: Number
     },
     mounted() {
       let vm = this
@@ -50,7 +48,7 @@
               .attr("transform",
                     "translate(" + margin.left + "," + margin.top + ")");
 
-          // Add X axis --> it is a date format
+          // Add X axis
           var x = d3.scaleLinear()
             .domain(d3.extent(data, function(d) { return d.Distance; }))
             .range([ 0, width ]);
