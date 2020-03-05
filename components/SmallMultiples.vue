@@ -116,7 +116,7 @@
                 'Distance (Miles): ' +
                 (xscale.invert(d3.mouse(this)[0])).toFixed(2) +
                 '<br>' +
-                'Average Price: ~' +
+                'Average Price: $' +
                 ((yscale.invert(d3.mouse(this)[1] - 10)) - 30).toFixed(2)
 
               )
