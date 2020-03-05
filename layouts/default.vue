@@ -26,6 +26,7 @@
   </div>
 </template>
 
+<!--Override some of bulmas defaults-->
 <style lang="scss">
   // Import Bulma's core
   @import "~bulma/sass/utilities/_all";
@@ -46,6 +47,10 @@
     "warning": ($warning, $warning-invert),
     "danger": ($danger, $danger-invert),
   );
+
+  // Font
+  $family-primary: Roboto, sans-serif;
+  $family-secondary: Roboto, sans-serif;
 
   // Links
   $link: $primary;
