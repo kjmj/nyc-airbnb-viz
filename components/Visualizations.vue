@@ -42,7 +42,6 @@
     components: {Carousel, Map, SampleViz, SmallMultiples, BarChart},
     data() {
       return {
-        datasetPromise: null,
         smallMultiplesPromise: null,
         neighborhoodsPromise: null,
         priceByNeighbourhoodPromise: null,
@@ -63,17 +62,7 @@
       }
     },
     created() {
-      // load in our dataset
-      this.datasetPromise = new Promise(function (resolve, reject) {
-        d3.csv('AB_NYC_2019.csv')
-          .then(function (data) {
-            resolve(data)
-          })
-          .catch(function (e) {
-            reject(Error(e))
-          })
-      })
-
+      // load in our datasets
       this.smallMultiplesPromise = new Promise(function (resolve, reject) {
         d3.csv('AB_NYC_2019_calculated_smallMultiples.csv')
           .then(function (data) {

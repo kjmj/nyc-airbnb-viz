@@ -2,7 +2,7 @@
   <div>
     <h2 class="title is-2">Introduction</h2>
     <img src="Map.png">
-    <p class="subsubtitle">Above is a quick overview of every single listing in our dataset. It is colored by
+    <p class="subtitle">Above is a quick overview of every single listing in our dataset. It is colored by
       neighborhood and the size of each dot shows the price for that listing. This one is not interactible, but should
       give you an idea of the crazy amount of airbnb options that are available!</p>
     <br>
