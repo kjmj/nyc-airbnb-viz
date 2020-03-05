@@ -44,20 +44,21 @@
           .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+
         // Add X axis
         var x = d3.scaleLinear()
           .domain([0, 1])
           .range([ 0, width ]);
 
+        svg.append("g")
+          .attr("transform", "translate(" + temp + "," + height + ")")
+          .call(d3.axisBottom(x).ticks(8));
+
+
         //Add Y axis
         var y = d3.scaleLinear()
           .domain([0, 1000])
           .range([ height, 0 ]);
-
-
-        svg.append("g")
-          .attr("transform", "translate(" + temp + "," + height + ")")
-          .call(d3.axisBottom(x).ticks(8));
 
         svg.append("g")
           .call(d3.axisLeft(y).ticks(5));
@@ -75,8 +76,8 @@
           .attr("stroke-width", 1.9)
           .attr("d", function(d){
             return d3.line()
-              .x(function(d) { return x(d.Distance); })
-              .y(function(d) { return y(d.Price); })
+              .x(function(d) { return x(d.RoundedDistance); })
+              .y(function(d) { return y(d.Average); })
               (d.values)
           })
 
