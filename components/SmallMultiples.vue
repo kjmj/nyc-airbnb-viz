@@ -6,6 +6,20 @@
   </div>
 </template>
 
+<style> /* set the CSS */
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+</style>
+
 <script>
   import * as d3 from 'd3'
 
@@ -64,6 +78,17 @@
         svg.append("g")
           .call(d3.axisLeft(y).ticks(5));
 
+        var xscale =  x;
+        var yscale = y;
+
+        svg.append("g")
+          .attr("class", "grid")
+          .call(
+            d3.axisLeft(y)
+              .tickSize(-width)
+              .tickFormat("")
+          );
+
         // color palette
         var color = d3.scaleOrdinal()
           .domain(allKeys)
@@ -82,19 +107,19 @@
               (d.values)
           })
           .on('mouseover', function (d) {
-            vm.tooltip.style('visibility', 'visible')
-          })
+          vm.tooltip.style('visibility', 'visible')
+        })
           .on('mousemove', function(d) {
 
             vm.tooltip
               .html(
-                'Distance: ' +
-                d.RoundedDistance +
+                'Distance (Miles): ' +
+                (xscale.invert(d3.mouse(this)[0])).toFixed(2) +
                 '<br>' +
-                'Price: ' +
-                d.Average
+                'Average Price: ~' +
+                ((yscale.invert(d3.mouse(this)[1] - 10)) - 30).toFixed(2)
 
-          )
+              )
               .style('top', event.pageY - 10 + 'px')
               .style('left', event.pageX + 10 + 'px')
 
