@@ -11,9 +11,16 @@
                          :tooltip="tooltip"></small-multiples>
       </div>
     </section>
+    <section class="section" id='bar'>
+      <div class="container">
+        <bar-chart
+          :price-by-borough-promise="priceByBoroughPromise"
+          :tooltip="tooltip"
+        ></bar-chart>
+      </div>
+    </section>
     <section class="section" id='map'>
       <div class="container">
-
         <Map :neighborhoods-promise="neighborhoodsPromise"
              :price-by-neighbourhood-promise="priceByNeighbourhoodPromise"
              :tooltip="tooltip"></Map>
@@ -24,6 +31,7 @@
 
 <script>
   import SampleViz from "./SampleViz";
+  import BarChart from "./BarChart";
   import SmallMultiples from "./SmallMultiples"
   import Map from "./Map";
   import * as d3 from 'd3'
@@ -31,13 +39,14 @@
 
   export default {
     name: "Visualizations",
-    components: {Carousel, Map, SampleViz, SmallMultiples},
+    components: {Carousel, Map, SampleViz, SmallMultiples, BarChart},
     data() {
       return {
         datasetPromise: null,
         smallMultiplesPromise: null,
         neighborhoodsPromise: null,
         priceByNeighbourhoodPromise: null,
+        priceByBoroughPromise: null,
         height: 900,
         width: 600,
         tooltip: d3
@@ -87,6 +96,16 @@
 
       this.priceByNeighbourhoodPromise = new Promise(function (resolve, reject) {
         d3.csv('priceByNeighbourhood.csv')
+          .then(function (data) {
+            resolve(data)
+          })
+          .catch(function (e) {
+            reject(Error(e))
+          })
+      })
+
+      this.priceByBoroughPromise = new Promise(function (resolve, reject) {
+        d3.csv('priceByBorough.csv')
           .then(function (data) {
             resolve(data)
           })

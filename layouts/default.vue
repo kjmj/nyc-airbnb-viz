@@ -11,10 +11,13 @@
           Carousel
         </b-navbar-item>
         <b-navbar-item v-scroll-to="{ el: '#smallMultiples', offset: -10 }">
-          Small Multiples
+          Price/Distance
+        </b-navbar-item>
+        <b-navbar-item v-scroll-to="{ el: '#bar', offset: -10 }">
+          Price/Borough
         </b-navbar-item>
         <b-navbar-item v-scroll-to="{ el: '#map', offset: -10 }">
-          Map
+          Price/Neighborhood
         </b-navbar-item>
       </template>
     </b-navbar>
