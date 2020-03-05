@@ -1,7 +1,9 @@
 <template>
   <div>
     <section class="section" id="description">
-      <description></description>
+      <div class="container">
+        <description></description>
+      </div>
     </section>
     <client-only>
       <visualizations></visualizations>

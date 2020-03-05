@@ -1,16 +1,23 @@
 <template>
   <div>
-    <!--    <sample-viz :datasetPromise="datasetPromise" :height="height" :width="width"></sample-viz>-->
     <section class="section" id="carousel">
-      <carousel></carousel>
+      <div class="container">
+        <carousel></carousel>
+      </div>
     </section>
     <section class="section" id="smallMultiples">
-      <small-multiples :smallMultiplesPromise="smallMultiplesPromise" :height="height" :width="width" :tooltip="tooltip"></small-multiples>
+      <div class="container">
+        <small-multiples :smallMultiplesPromise="smallMultiplesPromise" :height="height" :width="width"
+                         :tooltip="tooltip"></small-multiples>
+      </div>
     </section>
     <section class="section" id='map'>
-      <Map :neighborhoods-promise="neighborhoodsPromise"
-           :price-by-neighbourhood-promise="priceByNeighbourhoodPromise"
-      :tooltip="tooltip"></Map>
+      <div class="container">
+
+        <Map :neighborhoods-promise="neighborhoodsPromise"
+             :price-by-neighbourhood-promise="priceByNeighbourhoodPromise"
+             :tooltip="tooltip"></Map>
+      </div>
     </section>
   </div>
 </template>
