@@ -4,7 +4,7 @@
     <section class="section" id="carousel">
       <carousel></carousel>
     </section>
-    <section class="section">
+    <section class="section" id="smallMultiples">
       <small-multiples :smallMultiplesPromise="smallMultiplesPromise" :height="height" :width="width" :tooltip="tooltip"></small-multiples>
     </section>
     <section class="section" id='map'>

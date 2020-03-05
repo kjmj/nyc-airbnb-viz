@@ -10,6 +10,9 @@
         <b-navbar-item v-scroll-to="{ el: '#carousel', offset: -10 }">
           Carousel
         </b-navbar-item>
+        <b-navbar-item v-scroll-to="{ el: '#smallMultiples', offset: -10 }">
+          Small Multiples
+        </b-navbar-item>
         <b-navbar-item v-scroll-to="{ el: '#map', offset: -10 }">
           Map
         </b-navbar-item>
