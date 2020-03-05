@@ -3,7 +3,7 @@
     <b-navbar class="navbar header has-shadow is-primary" :fixed-top="true">
       <template slot="brand">
         <b-navbar-item v-scroll-to="{ el: '#description', offset: -10 }">
-          <img src="../assets/buefy.png"/>
+          <img src="../assets/logo.png"/>
         </b-navbar-item>
       </template>
       <template slot="start">
