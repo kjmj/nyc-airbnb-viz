@@ -14,6 +14,7 @@
     props: {
       neighborhoodsPromise: Promise,
       priceByNeighbourhoodPromise: Promise,
+      tooltip: Object
     },
     mounted() {
       let vm = this
@@ -32,17 +33,7 @@
       var data = d3.map();
 
       // tooltip that will show when mouse hovers over a neighborhood
-      var tooltip = d3
-        .select('body')
-        .append('div')
-        .style('position', 'absolute')
-        .style('z-index', '10')
-        .style('visibility', 'hidden')
-        .style('background-color', 'white')
-        .style('border', 'solid')
-        .style('border-width', '2px')
-        .style('border-radius', '5px')
-        .style('padding', '5px')
+
 
 
       // wait for data to load and create a map
@@ -85,7 +76,7 @@
               return d.total == 'No data' ? 'white' : color_scale6(d.total);
             })
             .on('mouseover', function (d) {
-              tooltip.style('visibility', 'visible')
+              vm.tooltip.style('visibility', 'visible')
 
               d3.select(this)
                 .style('stroke', 'black')
@@ -93,7 +84,7 @@
             .on('mousemove', function(d) {
               var total = d.total =='No data' ? 'No data' : d.total.toFixed(2)
 
-              tooltip
+              vm.tooltip
                 .html(
                   'Borough: ' +
                   d.properties.borough +
@@ -109,7 +100,7 @@
 
             })
             .on('mouseout', function (d) {
-              tooltip.style('visibility', 'hidden')
+              vm.tooltip.style('visibility', 'hidden')
 
               d3.select(this)
                 .style('stroke', 'none')
