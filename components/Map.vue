@@ -1,7 +1,8 @@
 <template>
   <div>
     <h2 class="title is-2">Map Viz</h2>
-    <h3 class="subtitle">Here is a map showing the average airbnb price by neighborhood in NYC</h3>
+    <p class="subtitle">Finally, a map viz for the map lovers in the room. The map is pretty self explanatory - it shows the average airbnb price by neighborhood. The darker the blue, the more expensive airbnb's are on average. We figured out how to get a legend on our map (it wasn't intuitive, FYI).</p>
+    <p class="subtitle">Feel free to hover over the neighborhoods for more information. Note that there are a few outliers - neighborhoods like Woodrow and Fort Wadsworth (Staten Island) didn't have a whole lot of data, so they might be a bit skewed.</p>
     <div id="mapViz"></div>
   </div>
 </template>

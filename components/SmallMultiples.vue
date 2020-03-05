@@ -1,7 +1,12 @@
 <template>
   <div>
     <h2 class="title is-2">Small Multiples</h2>
-    <h3 class="subtitle">Small Multiples will go here</h3>
+    <p class="subtitle">OK, onto d3. These graphs depict the average airbnb price as you get further away from the
+      specified landmark. We have found that airbnb prices generally decrease as you move further away from landmarks
+      such as the Flatiron building, Times Square, and the Central Park Zoo.</p>
+    <p class="subtitle">Most of the landmarks we chose were in Manhattan, which is the most expensive borough. So, we
+      aren't really sure if the prices go down because you're leaving manhattan, or if they really are just more
+      expensive near the landmarks.</p>
     <div id="smallMultiplesViz"></div>
   </div>
 </template>
@@ -33,7 +38,7 @@
       let vm = this
 
       // load data, then draw graph
-      vm.smallMultiplesPromise.then(function(data) {
+      vm.smallMultiplesPromise.then(function (data) {
 
         var margin = {top: 30, right: 0, bottom: 30, left: 50},
           width = 900 - margin.left - margin.right,
@@ -42,11 +47,15 @@
 
         // group the data: I want to draw one line per group
         var sumstat = d3.nest() // nest function allows to group the calculation per level of a factor
-          .key(function(d) { return d.Landmark;})
+          .key(function (d) {
+            return d.Landmark;
+          })
           .entries(data);
 
         // What is the list of groups?
-        var allKeys = sumstat.map(function(d){return d.key})
+        var allKeys = sumstat.map(function (d) {
+          return d.key
+        })
 
         // Add an svg element for each group. The will be one beside each other and will go on the next row when no more room available
         var svg = d3.select("#smallMultiplesViz")
@@ -63,7 +72,7 @@
         // Add X axis
         var x = d3.scaleLinear()
           .domain([0, 15])
-          .range([ 0, width ]);
+          .range([0, width]);
 
         svg.append("g")
           .attr("transform", "translate(" + temp + "," + height + ")")
@@ -80,20 +89,20 @@
         //Add Y axis
         var y = d3.scaleLinear()
           .domain([0, 650])
-          .range([ height, 0 ]);
+          .range([height, 0]);
 
         // Y axis label:
         svg.append("text")
           .attr("text-anchor", "end")
           .attr("transform", "rotate(-90)")
-          .attr("y", -margin.left+15)
+          .attr("y", -margin.left + 15)
           .attr("x", -margin.top - 30)
           .text("Average Price")
 
         svg.append("g")
           .call(d3.axisLeft(y).ticks(5));
 
-        var xscale =  x;
+        var xscale = x;
         var yscale = y;
 
         svg.append("g")
@@ -107,24 +116,30 @@
         // color palette
         var color = d3.scaleOrdinal()
           .domain(allKeys)
-          .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','black','#a65628','#f781bf','#999999'])
+          .range(['#e41a1c', '#377eb8', '#4daf4a', '#984ea3', '#ff7f00', 'black', '#a65628', '#f781bf', '#999999'])
 
         // Draw the line
         svg
           .append("path")
           .attr("fill", "none")
-          .attr("stroke", function(d){ return color(d.key) })
+          .attr("stroke", function (d) {
+            return color(d.key)
+          })
           .attr("stroke-width", 1.9)
-          .attr("d", function(d){
+          .attr("d", function (d) {
             return d3.line()
-              .x(function(d) { return x(d.RoundedDistance); })
-              .y(function(d) { return y(d.Average); })
+              .x(function (d) {
+                return x(d.RoundedDistance);
+              })
+              .y(function (d) {
+                return y(d.Average);
+              })
               (d.values)
           })
           .on('mouseover', function (d) {
-          vm.tooltip.style('visibility', 'visible')
-        })
-          .on('mousemove', function(d) {
+            vm.tooltip.style('visibility', 'visible')
+          })
+          .on('mousemove', function (d) {
 
             vm.tooltip
               .html(
@@ -133,7 +148,6 @@
                 '<br>' +
                 'Average Price: $' +
                 ((yscale.invert(d3.mouse(this)[1] - 10)) - 30).toFixed(2)
-
               )
               .style('top', event.pageY - 10 + 'px')
               .style('left', event.pageX + 10 + 'px')
@@ -149,8 +163,12 @@
           .attr("text-anchor", "start")
           .attr("y", -5)
           .attr("x", 0)
-          .text(function(d){ return(d.key)})
-          .style("fill", function(d){ return color(d.key) })
+          .text(function (d) {
+            return (d.key)
+          })
+          .style("fill", function (d) {
+            return color(d.key)
+          })
       })
     }
   }
