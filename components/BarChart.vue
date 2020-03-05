@@ -54,8 +54,15 @@
             .attr("transform", "translate(0," + height + ")")
             .call(d3.axisBottom(x))
             .selectAll("text")
-            .attr("transform", "translate(-10,0)rotate(-45)")
+            .attr("transform", "translate(17,0)rotate(0)")
             .style("text-anchor", "end");
+
+        // Add X axis label:
+        svg.append("text")
+          .attr("text-anchor", "start")
+          .attr("x", width / 2)
+          .attr("y", height + margin.top + 5)
+          .text("Borough");
 
           // Add Y axis
           var y = d3.scaleLinear()
