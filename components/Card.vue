@@ -2,25 +2,27 @@
   <div class="column">
     <div class="card">
       <header class="card-header">
-        <p class="card-header-title has-text-grey">
-          <a
-            :href="link"
-            target="_blank"
-          >{{title}}</a
-          >
-        </p>
       </header>
 
       <div class="card-content columns">
         <div class="column is-narrow">
-            <img :src="image" style="width: 256px; display: block">
+          <img :src="image" style="width: 256px; display: block">
         </div>
 
         <div class="column">
-          <p class="title is-4">{{neighborhood}}, {{borough}}</p>
-          <p class="subtitle is-5">{{price}}</p>
+          <p class="title is-4">
+            <a
+              :href="link"
+              target="_blank"
+            >{{title}}</a
+            >
+          </p>
+          <p class="title is-6">{{neighborhood}}, {{borough}}</p>
+          <p class="subtitle is-6">{{price}}</p>
         </div>
       </div>
+
+      <footer clas="card-footer"></footer>
     </div>
   </div>
 </template>
