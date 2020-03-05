@@ -3,11 +3,9 @@
     <section class="section" id="description">
       <description></description>
     </section>
-    <section class="section" id="sampleViz">
-      <client-only>
-        <visualizations></visualizations>
-      </client-only>
-    </section>
+    <client-only>
+      <visualizations></visualizations>
+    </client-only>
 
     <!--this is here temporarily so clicking navbar items scrolls-->
     <div style="height: 1000px"></div>
@@ -15,15 +13,15 @@
 </template>
 
 <script>
-import Description from '~/components/Description'
-import Visualizations from "../components/Visualizations";
+  import Description from '~/components/Description'
+  import Visualizations from "../components/Visualizations";
 
-export default {
-  name: 'HomePage',
+  export default {
+    name: 'HomePage',
 
-  components: {
-    Visualizations,
-    Description,
+    components: {
+      Visualizations,
+      Description,
+    }
   }
-}
 </script>

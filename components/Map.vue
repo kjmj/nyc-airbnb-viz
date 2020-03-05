@@ -2,7 +2,7 @@
   <div>
     <h2 class="title is-2">Map Viz</h2>
     <h3 class="subtitle">Here is a map showing the average airbnb price by neighborhood in NYC</h3>
-    <div id="sampleViz"></div>
+    <div id="mapViz"></div>
   </div>
 </template>
 
@@ -23,7 +23,7 @@
 
       // draw a quick svg for show
       var svg = d3
-        .select('#sampleViz')
+        .select('#mapViz')
         .append('svg')
         .attr('height', 600)
         .attr('width', 900)

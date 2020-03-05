@@ -1,11 +1,15 @@
 <template>
   <div>
-<!--    <sample-viz :datasetPromise="datasetPromise" :height="height" :width="width"></sample-viz>-->
+    <!--    <sample-viz :datasetPromise="datasetPromise" :height="height" :width="width"></sample-viz>-->
+    <section class="section" id="carousel">
+      <carousel></carousel>
+    </section>
     <section class="section">
       <small-multiples :smallMultiplesPromise="smallMultiplesPromise" :height="height" :width="width"></small-multiples>
     </section>
-    <section class="section">
-      <Map :neighborhoods-promise="neighborhoodsPromise" :price-by-neighbourhood-promise="priceByNeighbourhoodPromise"></Map>
+    <section class="section" id='map'>
+      <Map :neighborhoods-promise="neighborhoodsPromise"
+           :price-by-neighbourhood-promise="priceByNeighbourhoodPromise"></Map>
     </section>
   </div>
 </template>
@@ -15,10 +19,11 @@
   import SmallMultiples from "./SmallMultiples"
   import Map from "./Map";
   import * as d3 from 'd3'
+  import Carousel from "./Carousel";
 
   export default {
     name: "Visualizations",
-    components: {SampleViz, SmallMultiples, Map},
+    components: {Carousel, Map, SampleViz, SmallMultiples},
     data() {
       return {
         datasetPromise: null,
