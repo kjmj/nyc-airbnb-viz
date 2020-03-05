@@ -111,7 +111,7 @@
           // this will contain information when building our legend
           var legendKeys = []
 
-          // my attempt at using our color scale to create different ranges for the color scale
+          // my attempt at using our color scale to create different ranges for the legend
           color_scale6.quantiles().forEach(function (item, index) {
             var curr = item
             var next = null
