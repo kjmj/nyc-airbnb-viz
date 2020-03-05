@@ -23,6 +23,15 @@
     <div>
       <nuxt/>
     </div>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>NYC airbnb viz</strong> by <a href="https://github.com/kjmj" target="_blank">Ken Morton</a> and <a href="https://github.com/NeerJariwala" target="_blank">Neer Jariwala</a>. Find our source code on
+          <a href="https://github.com/kjmj/final" target="_blank">GitHub</a>.
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
