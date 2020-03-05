@@ -62,7 +62,7 @@
 
         // Add X axis
         var x = d3.scaleLinear()
-          .domain([0, 25])
+          .domain([0, 15])
           .range([ 0, width ]);
 
         svg.append("g")
@@ -72,7 +72,7 @@
 
         //Add Y axis
         var y = d3.scaleLinear()
-          .domain([0, 700])
+          .domain([0, 650])
           .range([ height, 0 ]);
 
         svg.append("g")
