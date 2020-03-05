@@ -2,7 +2,7 @@
   <div>
     <h2 class="title is-2">Small Multiples</h2>
     <h3 class="subtitle">Small Multiples will go here</h3>
-    <div id="smallMultiples"></div>
+    <div id="smallMultiplesViz"></div>
   </div>
 </template>
 
@@ -49,7 +49,7 @@
         var allKeys = sumstat.map(function(d){return d.key})
 
         // Add an svg element for each group. The will be one beside each other and will go on the next row when no more room available
-        var svg = d3.select("#smallMultiples")
+        var svg = d3.select("#smallMultiplesViz")
           .selectAll("uniqueChart")
           .data(sumstat)
           .enter()
