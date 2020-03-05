@@ -20,7 +20,7 @@
       let vm = this
 
       // load data, then draw graph
-      vm.datasetPromise.then(function(data) {
+      vm.datasetPromise.then(function (data) {
         // data available here
         console.log(data)
 
