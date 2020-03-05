@@ -60,7 +60,7 @@
         // Add X axis label:
         svg.append("text")
           .attr("text-anchor", "start")
-          .attr("x", width / 2)
+          .attr("x", width / 2 - margin.top)
           .attr("y", height + margin.top + 5)
           .text("Borough");
 
