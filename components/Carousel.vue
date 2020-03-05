@@ -1,9 +1,10 @@
 <template>
   <div>
-    <h2 class="title is-2">Some expensive airbnb's</h2>
-    <p class="subtitle">We did a bit of searching to find some expensive airbnb's in the city. They say NYC has it all -
-      and we agree. You can rent a boat, book a huge home on a film location, or even hit the hay in a 1 bedroom
-      apartment in chinatown for a reasonable $9,999 / night</p>
+    <h2 class="title is-2">The Crazy Expensive Ones</h2>
+    <p class="subtitle">Got a lot of money and really wanna just use it somewhere? We don't. Either way, what you will
+      see below is a few of the most expensive listings we found. They say NYC has it all - and we agree. You can rent a
+      boat, book a huge home on a film location, or even hit the hay in a 1 bedroom apartment in chinatown for a
+      reasonable $9,999/night. (Invite us please)</p>
     <div style="max-width: 800px">
       <b-carousel
         class="column"

@@ -1,12 +1,17 @@
 <template>
   <div>
-    <h2 class="title is-2">Small Multiples</h2>
-    <p class="subtitle">OK, onto d3. These graphs depict the average airbnb price as you get further away from the
-      specified landmark. We have found that airbnb prices generally decrease as you move further away from landmarks
-      such as the Flatiron building, Times Square, and the Central Park Zoo.</p>
-    <p class="subtitle">Most of the landmarks we chose were in Manhattan, which is the most expensive borough. So, we
-      aren't really sure if the prices go down because you're leaving manhattan, or if they really are just more
-      expensive near the landmarks.</p>
+    <h2 class="title is-2">Comparing Average Price to Distance from Popular Landmarks</h2>
+    <p class="subtitle"> When you go to a specific area, you usually want to be closer to the places you want to visit.
+      Unless you like driving I guess. Below you will see an array of line charts depicting the average price of an
+      airbnb compared to how far that listing (in miles) is from a landmark. In this case we chose 9 different locations
+      to preform our calculation on.</p>
+    <p class="subtitle">We have found that airbnb average prices generally decrease as you move further away from
+      landmarks. However, the further you get, the less options you have. If you look at any of the lines graphs below,
+      you will see some sudden spikes, especially the further away you are. These are cause by there only being a
+      couple of listing at this distance, causing the average price to fluctuate quite a bit. Please note that most of
+      the landmarks we chose were in Manhattan, which is the most expensive borough. One aspect we are totally sure
+      about is if prices go down because you're leaving manhattan, or if they really are just more expensive near the
+      landmarks.</p>
     <div id="smallMultiplesViz"></div>
   </div>
 </template>
@@ -174,6 +179,8 @@
   }
 </script>
 
+
 <style scoped>
+
 
 </style>
