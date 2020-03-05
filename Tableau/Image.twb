@@ -409,7 +409,6 @@
         <edge name='right'>
           <strip size='160'>
             <card pane-specification-id='0' param='[federated.1erfbz810ap5yz16r2c2x1jherlh].[none:neighbourhood_group:nk]' type='color' />
-            <card pane-specification-id='0' param='[federated.1erfbz810ap5yz16r2c2x1jherlh].[sum:price:ok]' type='size' />
           </strip>
         </edge>
       </cards>
