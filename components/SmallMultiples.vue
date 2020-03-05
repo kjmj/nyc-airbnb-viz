@@ -70,10 +70,25 @@
           .call(d3.axisBottom(x).ticks(8));
 
 
+        // Add X axis label:
+        svg.append("text")
+          .attr("text-anchor", "start")
+          .attr("x", width / 2)
+          .attr("y", height + margin.top)
+          .text("Distance (miles)");
+
         //Add Y axis
         var y = d3.scaleLinear()
           .domain([0, 650])
           .range([ height, 0 ]);
+
+        // Y axis label:
+        svg.append("text")
+          .attr("text-anchor", "end")
+          .attr("transform", "rotate(-90)")
+          .attr("y", -margin.left+15)
+          .attr("x", -margin.top - 30)
+          .text("Average Price")
 
         svg.append("g")
           .call(d3.axisLeft(y).ticks(5));
