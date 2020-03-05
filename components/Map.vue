@@ -1,8 +1,12 @@
 <template>
   <div>
     <h2 class="title is-2">Map Viz</h2>
-    <p class="subtitle">Finally, a map viz for the map lovers in the room. The map is pretty self explanatory - it shows the average airbnb price by neighborhood. The darker the blue, the more expensive airbnb's are on average. We figured out how to get a legend on our map (it wasn't as easy as you might think, FYI).</p>
-    <p class="subtitle">Feel free to hover over the neighborhoods for more information. Note that there are a few outliers - neighborhoods like Woodrow and Fort Wadsworth (Staten Island) didn't have a whole lot of data, so they might be a bit skewed.</p>
+    <p class="subtitle">Finally, a map viz for the map lovers in the room. The map is pretty self explanatory - it shows
+      the average airbnb price by neighborhood. The darker the blue, the more expensive airbnb's are on average. We
+      figured out how to get a legend on our map (it wasn't as easy as you might think, FYI).</p>
+    <p class="subtitle">Feel free to hover over the neighborhoods for more information. Note that there are a few
+      outliers - neighborhoods like Woodrow and Fort Wadsworth (Staten Island) didn't have a whole lot of data, so they
+      might be a bit skewed.</p>
     <div id="mapViz"></div>
   </div>
 </template>
@@ -81,7 +85,7 @@
                 .style('stroke', 'black')
             })
             .on('mousemove', function (d) {
-              var total = d.total == 'No data' ? 'No data' : d.total.toFixed(2)
+              var total = d.total == 'No data' ? 'Average price: No data' : 'Average price: $' + d.total.toFixed(2)
 
               vm.tooltip
                 .html(
@@ -91,7 +95,6 @@
                   'Neighborhood: ' +
                   d.properties.neighborhood +
                   '<br>' +
-                  'Average price: $' +
                   total
                 )
                 .style('top', event.pageY - 10 + 'px')
