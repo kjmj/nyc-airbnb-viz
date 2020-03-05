@@ -9,7 +9,10 @@
       visit the city to explore, meet friend, and have a good time.
       This got us curious.... Where do these people stay? Where SHOULD they stay? To feed our need for information, we
       looked around for any data available online that could show us different living options in NYC.
-      That is when we found an interesting dataset from Kaggle containing various information on airbnb listings in NYC.
+      That is when we found an interesting <a href="https://www.kaggle.com/dgomonov/new-york-city-airbnb-open-data/"
+                                              target="_blank">dataset</a>
+      from Kaggle containing various information on
+      airbnb listings in NYC.
       After scanning through the dataset, we wanted to answer three main questions.</p>
     <div class="content">
       <ol type="1">
@@ -21,7 +24,7 @@
     <p class="subtitle">As you continue to scroll down this page of colors, graphs, and information, you'll find the
       answers we came up with the visualizations we created. Each of the following section focuses on one of our three
       questions (don't worry, they are in order) and tries to provide you with some hopefully helpful information for
-    your travels. Enjoy!</p>
+      your travels. Enjoy!</p>
   </div>
 </template>
 
