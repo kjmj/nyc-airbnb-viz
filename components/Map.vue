@@ -32,9 +32,6 @@
       // use a map to store our data
       var data = d3.map();
 
-      // tooltip that will show when mouse hovers over a neighborhood
-
-
 
       // wait for data to load and create a map
       Promise.all([vm.neighborhoodsPromise, vm.priceByNeighbourhoodPromise]).then(

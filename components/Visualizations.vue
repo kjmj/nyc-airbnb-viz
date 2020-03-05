@@ -5,7 +5,7 @@
       <carousel></carousel>
     </section>
     <section class="section">
-      <small-multiples :smallMultiplesPromise="smallMultiplesPromise" :height="height" :width="width"></small-multiples>
+      <small-multiples :smallMultiplesPromise="smallMultiplesPromise" :height="height" :width="width" :tooltip="tooltip"></small-multiples>
     </section>
     <section class="section" id='map'>
       <Map :neighborhoods-promise="neighborhoodsPromise"

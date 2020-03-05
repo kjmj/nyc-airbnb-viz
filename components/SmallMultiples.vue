@@ -13,6 +13,7 @@
     name: "SmallMultiples",
     props: {
       smallMultiplesPromise: Promise,
+      tooltip: Object
     },
     mounted() {
       let vm = this
@@ -79,6 +80,27 @@
               .x(function(d) { return x(d.RoundedDistance); })
               .y(function(d) { return y(d.Average); })
               (d.values)
+          })
+          .on('mouseover', function (d) {
+            vm.tooltip.style('visibility', 'visible')
+          })
+          .on('mousemove', function(d) {
+
+            vm.tooltip
+              .html(
+                'Distance: ' +
+                d.RoundedDistance +
+                '<br>' +
+                'Price: ' +
+                d.Average
+
+          )
+              .style('top', event.pageY - 10 + 'px')
+              .style('left', event.pageX + 10 + 'px')
+
+          })
+          .on('mouseout', function (d) {
+            vm.tooltip.style('visibility', 'hidden')
           })
 
         // Add titles
