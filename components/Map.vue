@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="title is-2">Map Viz</h2>
-    <p class="subtitle">Finally, a map viz for the map lovers in the room. The map is pretty self explanatory - it shows the average airbnb price by neighborhood. The darker the blue, the more expensive airbnb's are on average. We figured out how to get a legend on our map (it wasn't intuitive, FYI).</p>
+    <p class="subtitle">Finally, a map viz for the map lovers in the room. The map is pretty self explanatory - it shows the average airbnb price by neighborhood. The darker the blue, the more expensive airbnb's are on average. We figured out how to get a legend on our map (it wasn't as easy as you might think, FYI).</p>
     <p class="subtitle">Feel free to hover over the neighborhoods for more information. Note that there are a few outliers - neighborhoods like Woodrow and Fort Wadsworth (Staten Island) didn't have a whole lot of data, so they might be a bit skewed.</p>
     <div id="mapViz"></div>
   </div>
@@ -20,15 +20,15 @@
     mounted() {
       let vm = this
 
-      var height = 600
-      var width = 900
+      var height = 700
+      var width = 600
 
       // draw a quick svg for show
       var svg = d3
         .select('#mapViz')
         .append('svg')
-        .attr('height', 600)
-        .attr('width', 900)
+        .attr('height', height)
+        .attr('width', width)
 
       // use a map to store our data
       var data = d3.map();
@@ -151,7 +151,7 @@
             .data(legendKeys)
             .enter()
             .append("circle")
-            .attr("cx", 100)
+            .attr("cx", 20)
             .attr("cy", function (d, i) {
               return 100 + i * 25
             }) // 100 is where the first dot appears. 25 is the distance between dots
@@ -166,7 +166,7 @@
             .data(legendKeys)
             .enter()
             .append("text")
-            .attr("x", 120)
+            .attr("x", 40)
             .attr("y", function (d, i) {
               return 100 + i * 25
             }) // 100 is where the first dot appears. 25 is the distance between dots
