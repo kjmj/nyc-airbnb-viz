@@ -151,6 +151,16 @@
             }
           });
 
+
+          // Legend title
+          svg.append("text")
+            .attr("x", 13)
+            .attr("y", 80)
+            .text("Average Price")
+            .style("font-size", "18px")
+            .style("font-weight", "bold")
+            .attr("alignment-baseline", "start")
+
           // Add one dot in the legend for each name.
           svg.selectAll("mydots")
             .data(legendKeys)
