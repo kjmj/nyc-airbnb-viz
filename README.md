@@ -1,6 +1,15 @@
-# Final Project - Interactive Data Visualization
+# nyc-airbnb-viz
 
-> An interactive data visualization
+Find the website [here](https://kjmj.github.io/nyc-airbnb-viz/)
+
+This project serves as an exploration of airbnb data in NYC. We wanted to compare the price of listings to other aspects. Here are the three main questions that our website answers.
+
+1. What are some of the most crazy and expensive airbnb listings in NYC?
+2. How do airbnb's average prices changes depending on how close they are to popular
+landmarks?
+3. Which neighborhoods have the most expensive airbnb's?
+
+This project was completed in Lane Harrison's Dataviz class at WPI.
 
 ## Build Setup
 
@@ -18,17 +27,9 @@ $ yarn start
 # generate static project
 $ yarn generate
 
-# deploy to github pages here https://kjmj.github.io/final/
+# deploy to github pages here https://kjmj.github.io/nyc-airbnb-viz/
 $ yarn generate:gh-pages
 $ yarn deploy
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
-
-## Project Summary
-Find our materials below:
-- [Website](https://kjmj.github.io/final/)
-- [Screencast](https://www.youtube.com/watch?v=UidwZUE78XI&feature=youtu.be)
-- [Process Book](https://kjmj.github.io/final/Process%20Book.pdf)
-
-We used [vue.js](https://vuejs.org) to create this website. We also used [buefy](https://buefy.org) as our UI framework. It made formatting things for mobile and web a lot easier.

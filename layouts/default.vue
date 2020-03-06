@@ -33,7 +33,7 @@
           <strong>NYC airbnb viz</strong> by <a href="https://github.com/kjmj/" target="_blank">Ken Morton</a> and <a
           href="https://github.com/NeerJariwala/" target="_blank">Neer Jariwala</a> for Lane Harrison's Data
           Visualization course at <a href="https://www.wpi.edu/" target="_blank">WPI</a>. Find our source code on
-          <a href="https://github.com/kjmj/final/" target="_blank">GitHub</a>.
+          <a href="https://github.com/kjmj/nyc-airbnb-viz/" target="_blank">GitHub</a>.
         </p>
         <p>
           Made with <a href="https://vuejs.org/" target="_blank">vue.js</a> and <a href="https://d3js.org/"
