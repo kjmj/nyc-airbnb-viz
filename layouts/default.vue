@@ -39,8 +39,7 @@
           Made with <a href="https://vuejs.org/" target="_blank">vue.js</a> and <a href="https://d3js.org/"
                                                                                    target="_blank">d3.js</a>. Here is
           our <a href="https://www.kaggle.com/dgomonov/new-york-city-airbnb-open-data/" target="_blank">dataset</a> on
-          Kaggle. Additionally, here is our <a href="Process Book.pdf" target="_blank">process book</a> and
-          <a href="https://www.youtube.com/watch?v=UidwZUE78XI&feature=youtu.be/" target="_blank">screencast</a>.
+          Kaggle.
         </p>
       </div>
     </footer>
